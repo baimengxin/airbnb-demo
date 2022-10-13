@@ -21,11 +21,22 @@ npm install @craco/craco@alpha
 # 安装 craco-less
 针对 craco 7 版本
 ~~~
-npm i craco-less@2.1.0-alpha.0
+npm install craco-less@2.1.0-alpha.0
 ~~~
 
 # 安装 normalize
 ~~~
-npm i normalize.css
+npm install normalize.css
 ~~~
 
+# 安装 router 路由
+~~~
+npm install react-router-dom
+~~~
+
+# 安装 redux 状态管理
+本项目将会采用 首页 @reduxjs/toolkit
+entire 页面将会采取普通的方式
+~~~
+npm install @reduxjs/toolkit react-redux
+~~~
