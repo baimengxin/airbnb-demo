@@ -24,3 +24,8 @@ npm install @craco/craco@alpha
 npm i craco-less@2.1.0-alpha.0
 ~~~
 
+# 安装 normalize
+~~~
+npm i normalize.css
+~~~
+
