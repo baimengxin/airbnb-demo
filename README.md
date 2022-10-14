@@ -45,3 +45,8 @@ npm install @reduxjs/toolkit react-redux
 ~~~
 npm install axios
 ~~~
+
+# 安装 styled-components
+~~~
+npm install styled-components
+~~~
