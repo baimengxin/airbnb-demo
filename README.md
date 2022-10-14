@@ -40,3 +40,8 @@ entire 页面将会采取普通的方式
 ~~~
 npm install @reduxjs/toolkit react-redux
 ~~~
+
+# 安装 axios
+~~~
+npm install axios
+~~~
