@@ -26,7 +26,7 @@ const Home = memo(() => {
           <SectionHeader title={goodPriceInfo.title} />
           <ul>
             {
-              goodPriceInfo.list.map(item => {
+              goodPriceInfo?.list?.map(item => {
                 return <li key={item.id}>{ item.name }</li>
               })
             }
