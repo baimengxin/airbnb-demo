@@ -50,3 +50,9 @@ npm install axios
 ~~~
 npm install styled-components
 ~~~
+
+
+# 安装 Ant Design
+~~~
+npm install antd
+~~~

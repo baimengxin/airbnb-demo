@@ -1,5 +1,6 @@
 import React, { memo, useEffect } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { Button } from 'antd';
 
 import { fetchHomeDataAction } from '@/store/modules/home'
 import HomeBanner from './c-cpns/home-banner'
@@ -36,6 +37,14 @@ const Home = memo(() => {
           </ul>
         </div>
       </div>
+
+
+      <Button type="primary">Primary Button</Button>
+      <Button>Default Button</Button>
+      <Button type="dashed">Dashed Button</Button>
+      <br />
+      <Button type="text">Text Button</Button>
+      <Button type="link">Link Button</Button>
     </HomeWrapper>
   )
 })
