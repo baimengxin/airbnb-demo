@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { memo } from 'react'
+import { Rate } from 'antd';
+
 import { ItemWrapper } from './style'
 
 const RoomItem = memo((props) => {
@@ -20,6 +22,16 @@ const RoomItem = memo((props) => {
 
             <div className='name'>{itemData.name}</div>
             <div className='price'>¥{itemData.price}/晚</div>
+
+            <div className="bottom">
+                <Rate disabled defaultValue={ itemData.star_rating ?? 5 } 
+                style={{fontSize: "12px", color: "#00848A"}} />
+
+                <span className='count'>{ itemData.reviews_count }</span>
+                {
+                    itemData.bottom_info && <span className='extra'>· {itemData.bottom_info?.content}</span>
+                }
+            </div>
         </div>
     </ItemWrapper>
   )

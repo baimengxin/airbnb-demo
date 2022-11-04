@@ -47,4 +47,25 @@ export const ItemWrapper = styled.div`
     .price {
         margin: 10px 0 5px;
     }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: ${props => props.theme.textColor.primaryColor};
+
+        .ant-rate-star:not(:last-child) {
+            margin-right: 0px;
+        }
+
+        .count {
+            margin: 0 2px 0 4px;
+            padding-top: 2px;
+        }
+
+        .extra {
+            padding-top: 2px;
+        }
+    }
 `
