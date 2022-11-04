@@ -24,7 +24,7 @@ const RoomItem = memo((props) => {
             <div className='price'>¥{itemData.price}/晚</div>
 
             <div className="bottom">
-                <Rate disabled defaultValue={ itemData.star_rating ?? 5 } 
+                <Rate disabled allowHalf defaultValue={ itemData.star_rating ?? 5 } 
                 style={{fontSize: "12px", color: "#00848A"}} />
 
                 <span className='count'>{ itemData.reviews_count }</span>
