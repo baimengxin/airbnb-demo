@@ -7,6 +7,8 @@ import { HomeWrapper } from './style'
 import HomeSectionV1 from './c-cpns/home-section-v1'
 import HomeSectionV2 from './c-cpns/home-section-v2'
 
+import { isEmptyObj } from '@/utils'
+
 const Home = memo(() => {
   // 从 redux 中获取数据
   const { disCountInfo ,goodPriceInfo, highScoreInfo } = useSelector((state) => ({
@@ -29,9 +31,10 @@ const Home = memo(() => {
     <HomeWrapper>
       <HomeBanner />
       <div className="content">
-        <HomeSectionV2 infoData={ disCountInfo } />
-        <HomeSectionV1 infoData={ goodPriceInfo } />
-        <HomeSectionV1 infoData={ highScoreInfo } />
+        { isEmptyObj(disCountInfo) && <HomeSectionV2 infoData={ disCountInfo } /> }
+        { isEmptyObj(goodPriceInfo) && <HomeSectionV1 infoData={ goodPriceInfo } /> }
+        { isEmptyObj(highScoreInfo) && <HomeSectionV1 infoData={ highScoreInfo } /> }
+        
       </div>
 
 

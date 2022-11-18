@@ -7,10 +7,10 @@ import SectionTabs from '@/components/section-tabs'
 import { SectionV2Wrapper } from './style'
 
 const HomeSectionV2 = memo((props) => {
-    const { infoData = [] } = props
+    const { infoData } = props
 
     // 处理数据
-  const [name, setName] = useState('佛山') 
+  const [name, setName] = useState(Object.keys(infoData.dest_list)[0]) 
   const tabNames = infoData.dest_address?.map(item => item.name)
   const tabClickHandle = useCallback(function (index, name) {
     setName(name)
