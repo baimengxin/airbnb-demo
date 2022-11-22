@@ -35,7 +35,8 @@ const ScrollView = memo((props) => {
         // 动画
         scrollContentRef.current.style.transform = `translate(-${newOffsetLeft}px)`
         // 更新状态
-        setPosIndex(newEl)
+        setPosIndex(newIndex)
+
     }
 
   return (
