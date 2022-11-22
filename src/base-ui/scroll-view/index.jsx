@@ -36,7 +36,8 @@ const ScrollView = memo((props) => {
         scrollContentRef.current.style.transform = `translate(-${newOffsetLeft}px)`
         // 更新状态
         setPosIndex(newIndex)
-
+        // 超出可视区域宽度 > 左偏移量，则隐藏右侧按钮
+        setShowRight(totalDistanceRef > newOffsetLeft)
     }
 
   return (
