@@ -28,8 +28,6 @@ const Home = memo(() => {
     dispatch(fetchHomeDataAction())
   }, [dispatch])
 
-  console.log(plusInfo);
-
   return (
     <HomeWrapper>
       <HomeBanner />
