@@ -16,10 +16,10 @@ export const changeRoomListAction = (roomList) => ({
     roomList
 })
 
-export const fetchEntireDataAction = () => {
-    return async (dispatch, getState) => {
-        const page = getState().entire.currentPage
-        const res = await getEntireRoomList(page)
+export const fetchEntireDataAction = (page = 0) => {
+    return async (dispatch) => {
+        // const page = getState().entire.currentPage
+        const res = await getEntireRoomList(page * 20)
 
         // 保存数据
         dispatch(changeCurrentPageAction(page))
