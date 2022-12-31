@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import { Pagination } from 'antd';
 
 import { PageinationWrapper } from './style'
-import { useDispatch, useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { fetchEntireDataAction } from '@/store/modules/entire/createActions';
 
 const EntirePagination = memo((props) => {
@@ -11,7 +11,7 @@ const EntirePagination = memo((props) => {
     currentPage: state.entire.currentPage,
     roomList: state.entire.roomList,
     totalCount: state.entire.totalCount
-  }))
+  }), shallowEqual)
 
   // 每页数量
   const pageSize = 20
@@ -22,6 +22,7 @@ const EntirePagination = memo((props) => {
   // 分页事件处理逻辑
   const dispatch = useDispatch()
   function pageChangeHandle(page, pageSize) {
+    window.scrollTo(0, 0)
     // 更新最新的页码
     dispatch(fetchEntireDataAction(page - 1))
   }

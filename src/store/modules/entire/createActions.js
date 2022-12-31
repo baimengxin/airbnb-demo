@@ -16,13 +16,20 @@ export const changeRoomListAction = (roomList) => ({
     roomList
 })
 
+export const changeLoadingAction = (loading) => ({
+    type: actionTypes.CHANGE_LOADING,
+    loading
+}) 
+
 export const fetchEntireDataAction = (page = 0) => {
     return async (dispatch) => {
-        // const page = getState().entire.currentPage
+        dispatch(changeCurrentPageAction(page))
+
+        dispatch(changeLoadingAction(true))
         const res = await getEntireRoomList(page * 20)
+        dispatch(changeLoadingAction(false))
 
         // 保存数据
-        dispatch(changeCurrentPageAction(page))
         dispatch(changeRoomListAction(res.list))
         dispatch(changeTotalCountAction(res.totalCount))
     }
