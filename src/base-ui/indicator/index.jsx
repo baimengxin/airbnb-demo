@@ -32,8 +32,6 @@ const Indicator = memo((props) => {
     if(distance > totalDistance) distance = totalDistance 
 
     contentRef.current.style.transform = `translate(${-distance}px)`
-
-    console.log(distance);
   }, [selectIndex])
 
   return (

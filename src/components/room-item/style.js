@@ -45,6 +45,36 @@ export const ItemWrapper = styled.div`
                 }
             }
         }
+
+        .indicator {
+            position: absolute;
+            z-index: 9;
+            width: 30%;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+            .dot-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+
+                .dot {
+                    width: 6px;
+                    height: 6px;
+                    background-color: #fff;
+                    border-radius: 50%;
+
+                    &.active {
+                        width: 8px;
+                        height: 8px;
+                        background-color: red;
+                    }
+                }
+            }
+        }
     }
 
     .cover {
