@@ -8,7 +8,7 @@ import Indicator from '@/base-ui/indicator';
 import classNames from 'classnames';
 
 const RoomItem = memo((props) => {
-    const { itemData, itemWidth='25%' } = props
+    const { itemData, itemWidth='25%', itemClick } = props
     const swiperRef = useRef()
     const [ selectIndex, setSelectIndex ] = useState(0)
 
@@ -24,7 +24,11 @@ const RoomItem = memo((props) => {
         setSelectIndex(newIndex)
     }
 
-    // 
+    function itemDataClick() {
+        if(itemClick) itemClick()
+    }
+
+    // 子元素的赋值
     const pictureElement = (
         <div className="cover">
             <img src={itemData.picture_url} alt="" />
@@ -77,6 +81,7 @@ const RoomItem = memo((props) => {
     <ItemWrapper 
         verifyColor={ itemData.verify_info.messages.text_color || "#39576a"} 
         itemWidth={ itemWidth }
+        onClick={ itemDataClick }
     >
         <div className="inner">
             {
